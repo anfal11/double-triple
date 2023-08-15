@@ -41,6 +41,11 @@
             p.style.fontWeight = 'bold';
             p.style.fontSize = '30px';
 
+            const screenWidth = window.innerWidth;
+                if (screenWidth <= 640) { 
+                    p.style.fontSize = '20px';
+                }
+
             document.getElementById('container').appendChild(p);
 
             
@@ -62,6 +67,11 @@
             p.style.color = 'white';
             p.style.fontWeight = 'bold';
             p.style.fontSize = '30px';
+
+            const screenWidth = window.innerWidth;
+                if (screenWidth <= 640) { 
+                    p.style.fontSize = '20px';
+                }
 
             document.getElementById('container').appendChild(p);
             
