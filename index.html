@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Double Triple </title>
+    <link rel="shortcut icon" href="./minions-guitar-1398002_1920.jpg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center text-sm md:text-4xl mt-10 font-bold"> Double 🤤 Double 🎨 Triple 🥉  </h1>
+    </header>
+    <section id="container" class="md:w-1/2 md:mx-auto bg-blue-300 mt-10 p-10 text-center">
+        <input id="user-input" class="border border-r-emerald-700 outline-none block mb-3 w-1/2 mx-auto" type="text">
+        <button id="btn-double" class="text-sm text-white text-center bg-pink-400 p-2"> Double </button>
+        <button id="btn-triple" class="text-sm text-white text-center bg-pink-400 p-2"> Triple </button>
+    </section>
+
+    <script>
+        const userInput = document.getElementById('user-input');
+        const btnDouble = document.getElementById('btn-double');
+        const btnTriple = document.getElementById('btn-triple');
+
+        btnDouble.addEventListener('click', function () {
+            const valueString = userInput.value;
+            const valueNumber = parseFloat(valueString);
+            userInput.value = '';
+            if (isNaN(valueNumber)) {
+                alert('Please enter a number');
+                return;
+            } 
+
+            const p = document.createElement('p');
+            const doubleValue = valueNumber * 2;
+            p.innerText = valueNumber + " Double value is: " + doubleValue;
+
+            p.style.color = 'white';
+            p.style.fontWeight = 'bold';
+            p.style.fontSize = '30px';
+
+            document.getElementById('container').appendChild(p);
+
+            
+        })
+
+        btnTriple.addEventListener('click', function(){
+            const valueString = userInput.value;
+            const valueNumber = parseFloat(valueString);
+            userInput.value = '';
+            if(isNaN(valueNumber)){
+                alert('Please enter a number');
+                return;
+            }
+
+            const p = document.createElement('p');
+            const tripleValue = valueNumber * 3;
+            p.innerText = valueNumber + " Triple value is: " + tripleValue;
+
+            p.style.color = 'white';
+            p.style.fontWeight = 'bold';
+            p.style.fontSize = '30px';
+
+            document.getElementById('container').appendChild(p);
+            
+        })
+    </script>
+</body>
+
+</html>
